@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="logar()" autocomplete="off" novalidate>
+    <ion-item>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Digite seu email"
+        required
+        autocomplete="email"
+        autocapitalize="none"
+        spellcheck="false"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-input
+        type="password"
+        [(ngModel)]="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        required
+        autocomplete="current-password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      type="submit"
+      [disabled]="!email || !senha"
+      class="ion-margin-top"
+    >
+      Entrar
+    </ion-button>
+
+    <ion-button class="criar"
+      expand="block"
+      fill="clear"
+      (click)="irParaCadastro()"
+    >
+      Criar Conta
+    </ion-button>
+  </form>
+</ion-content>
