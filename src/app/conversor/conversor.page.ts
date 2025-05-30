@@ -54,7 +54,10 @@ export class ConversorPage implements OnInit {
   }
 
   converter() {
-    if (!this.de || !this.para || this.valor == null) return;
+    if (!this.de || !this.para || this.valor === null || isNaN(this.valor)) {
+      this.resultado = null;
+      return;
+    }
 
     switch (this.categoria) {
       case 'comprimento':

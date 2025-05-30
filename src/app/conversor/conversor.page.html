@@ -11,14 +11,18 @@
   <ion-item>
     <ion-label>De</ion-label>
     <ion-select [(ngModel)]="de" placeholder="Escolha a unidade de origem">
-      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</ion-select-option>
+      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao"
+        >{{ opcao }}</ion-select-option
+      >
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label>Para</ion-label>
     <ion-select [(ngModel)]="para" placeholder="Escolha a unidade de destino">
-      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</ion-select-option>
+      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao"
+        >{{ opcao }}</ion-select-option
+      >
     </ion-select>
   </ion-item>
 
@@ -28,7 +32,8 @@
       class="input-valor"
       type="number"
       [(ngModel)]="valor"
-      placeholder="Digite o valor a ser convertido...">
+      placeholder="Digite o valor a ser convertido..."
+    >
     </ion-input>
   </ion-item>
 
@@ -37,7 +42,7 @@
   <div *ngIf="resultado !== null">
     <ion-card>
       <ion-card-content>
-        {{ valor }} {{ de }} = {{ resultado | number:'1.2-2' }} {{ para }}
+        {{ valor }} {{ de }} = {{ resultado }} {{ para }}
       </ion-card-content>
     </ion-card>
   </div>
