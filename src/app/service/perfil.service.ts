@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class PerfilService {
-  private api = '...'; //url aqui
+  private api = 'https://6839ba096561b8d882b17792.mockapi.io/api/v1/users'; //url aqui
 
   constructor(private http: HttpClient) {}
 

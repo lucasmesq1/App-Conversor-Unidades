@@ -73,7 +73,7 @@ export class LoginPage implements OnInit {
 
           this.email = '';
           this.senha = '';
-          this.router.navigate(['/tabs/tab1']);
+          this.router.navigate(['/categorias']);
         } else {
           this.mostrarToast('Senha incorreta.');
         }

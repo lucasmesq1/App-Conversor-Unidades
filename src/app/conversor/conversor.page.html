@@ -24,7 +24,12 @@
 
   <ion-item>
     <ion-label>Valor:</ion-label>
-    <ion-input class="input-valor" type="number" [(ngModel)]="valor" placeholder="Digite o valor a ser convertido..."></ion-input>
+    <ion-input
+      class="input-valor"
+      type="number"
+      [(ngModel)]="valor"
+      placeholder="Digite o valor a ser convertido...">
+    </ion-input>
   </ion-item>
 
   <ion-button expand="full" (click)="converter()">Converter</ion-button>
@@ -32,7 +37,7 @@
   <div *ngIf="resultado !== null">
     <ion-card>
       <ion-card-content>
-        Resultado: {{ resultado }}
+        {{ valor }} {{ de }} = {{ resultado | number:'1.2-2' }} {{ para }}
       </ion-card-content>
     </ion-card>
   </div>

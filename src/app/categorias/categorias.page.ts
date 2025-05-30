@@ -10,14 +10,14 @@ import { AlertController } from '@ionic/angular';
 })
 export class CategoriasPage implements OnInit {
   categorias = [
-    { nome: 'Comprimento', icone: 'resize', rota: 'Comprimento' },
-    { nome: 'Massa', icone: 'barbell', rota: 'Massa' },
-    { nome: 'Temperatura', icone: 'thermometer', rota: 'Temperatura' },
-    { nome: 'Tempo', icone: 'time', rota: 'Tempo' },
-    { nome: 'Área', icone: 'square', rota: 'Área' },
-    { nome: 'Volume', icone: 'cube', rota: 'Volume' },
-    { nome: 'Velocidade', icone: 'speedometer', rota: 'Velocidade' },
-    { nome: 'Energia', icone: 'flash', rota: 'Energia' },
+    { nome: 'Comprimento', icone: 'resize', rota: 'comprimento' },
+    { nome: 'Massa', icone: 'barbell', rota: 'massa' },
+    { nome: 'Temperatura', icone: 'thermometer', rota: 'temperatura' },
+    { nome: 'Tempo', icone: 'time', rota: 'tempo' },
+    { nome: 'Área', icone: 'square', rota: 'área' },
+    { nome: 'Volume', icone: 'cube', rota: 'volume' },
+    { nome: 'Velocidade', icone: 'speedometer', rota: 'velocidade' },
+    { nome: 'Energia', icone: 'flash', rota: 'energia' },
   ];
 
   nomeUsuario: string = 'Usuário';
