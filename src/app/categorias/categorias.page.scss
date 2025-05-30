@@ -1,0 +1,107 @@
+:host {
+  --ion-background-color: #f4f4f4;
+}
+
+ion-toolbar {
+    height: 100px;
+  --padding-top: 5vh;
+  --background: #0d47a1;
+  --color: #ffffff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+// === ESTILO PARA OS ITEMS ===
+ion-item {
+  --background: transparent;
+  --border-width: 0;
+  --inner-border-width: 0;
+  --inner-padding-end: 0;
+  border: 1px solid #0d47a1;
+  color: #7e7e7e;
+  border-radius: 12px;
+
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+}
+
+ion-label {
+  font-weight: 600;
+  color: #333;
+}
+
+ion-item:hover ion-label,
+ion-item:hover ion-select {
+  color: #4d4d4d;
+}
+
+ion-select,
+ion-input {
+  --background: none;
+  --color: #353535;
+}
+
+.input-valor {
+  --padding-start: 10px;
+}
+
+ion-input::part(native) {
+  padding-left: 12px;
+}
+
+// === BOTÃO DE CONVERSÃO ===
+ion-button {
+  --background: #1976d2;
+  --background-hover: #1565c0;
+  --color: #fff;
+  --border-radius: 10px;
+  text-transform: none;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+ion-card {
+  background: #1565c0;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ion-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+}

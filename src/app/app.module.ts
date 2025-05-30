@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';  // <-- Importar HttpClientModule
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-// Serviços
-import { ConverterService } from './services/converter.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +14,12 @@ import { ConverterService } from './services/converter.service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [
-    ConverterService
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

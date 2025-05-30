@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item lines="full">
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="nome" type="text" placeholder="Digite seu nome"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-icon name="mail-outline" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="email" type="email" placeholder="exemplo@email.com"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-input [(ngModel)]="senha" type="password" placeholder="Crie uma senha"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+
+  <p class="texto-link">
+    Já tem conta? 
+    <span (click)="irParaLogin()" class="link-entrar">Entrar</span>
+  </p>
+
+  <ion-text color="{{ corPopup }}">
+    <p class="mensagem-erro">{{ mensagemErro }}</p>
+  </ion-text>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/categorias"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Conversor de {{ categoria }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>De</ion-label>
+    <ion-select [(ngModel)]="de" placeholder="Escolha a unidade de origem">
+      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Para</ion-label>
+    <ion-select [(ngModel)]="para" placeholder="Escolha a unidade de destino">
+      <ion-select-option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Valor:</ion-label>
+    <ion-input class="input-valor" type="number" [(ngModel)]="valor" placeholder="Digite o valor a ser convertido..."></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="converter()">Converter</ion-button>
+
+  <div *ngIf="resultado !== null">
+    <ion-card>
+      <ion-card-content>
+        Resultado: {{ resultado }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
